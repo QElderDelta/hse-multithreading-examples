@@ -1,0 +1,20 @@
+cmake_minimum_required(VERSION 3.10)
+project(ApplyFunctionHW)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+if(NOT CMAKE_BUILD_TYPE)
+    set(CMAKE_BUILD_TYPE Release)
+endif()
+
+find_package(Threads REQUIRED)
+find_package(GTest REQUIRED)
+find_package(benchmark REQUIRED)
+add_executable(hw_tests test.cpp)
+target_include_directories(hw_tests PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+target_link_libraries(hw_tests PRIVATE GTest::GTest GTest::Main Threads::Threads)
+add_executable(hw_benchmark benchmark.cpp)
+target_include_directories(hw_benchmark PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+target_link_libraries(hw_benchmark PRIVATE benchmark::benchmark Threads::Threads)
+target_compile_options(hw_benchmark PRIVATE -O3 -march=native)
