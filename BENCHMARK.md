@@ -39,6 +39,17 @@ BM_BigVector_OneThread 1456122300 ns 1406250000 ns 1
 BM_BigVector_MultiThread 613954170 ns 1562500 ns 10
 
 
+## Скриншоты запуска
+
+### Тесты
+
+![tests](images/tests.png)
+
+### Бенчмарк
+
+![benchmark](images/benchmark.png)
+
+
 ## Вывод
 
 Если вектор маленький и функция простая, то один поток работает быстрее,
