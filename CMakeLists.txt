@@ -10,10 +10,4 @@ find_package(Threads REQUIRED)
 
 include_directories(include)
 
-add_subdirectory(cache)
-add_subdirectory(futex)
-add_subdirectory(ipc)
-add_subdirectory(lock_free)
 add_subdirectory(processes_and_threads)
-add_subdirectory(structured_concurrency)
-add_subdirectory(synchronization_primitives)
