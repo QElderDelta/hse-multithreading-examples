@@ -1,3 +1,4 @@
 build
 .cache
 .vscode
+processes_and_threads/vcpkg/
