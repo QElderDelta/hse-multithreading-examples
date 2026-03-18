@@ -1,3 +1,4 @@
 build
 .cache
 .vscode
+ipc_mpsc_shared_memory/build/
