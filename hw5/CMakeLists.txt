@@ -1,0 +1,5 @@
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+find_package(Threads REQUIRED)
+add_executable(pool_test test.cpp)
+target_link_libraries(pool_test PRIVATE Threads::Threads rt)
